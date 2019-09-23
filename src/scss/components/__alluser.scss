@@ -1,4 +1,7 @@
 @import '../abstracts/mixins';
+@import"../../../node_modules/animatewithsass/properties";
+
+@import "../../../node_modules/animatewithsass/_fading-entrances/fadeIn.scss";
 
 div.music_monitor_wrapper{
     font-family:var(--default-font);
@@ -61,6 +64,14 @@ div{
         border-collapse: collapse;
         width: 100%;
         margin-top:2rem;
+        @include fadeIn(
+
+          $duration: 5s,
+          $count: 1,
+          $delay: .2s,
+          $function: ease, 
+          $fill: both
+        );
         @include respond (android){
          width:100%;
          padding:0.1rem;

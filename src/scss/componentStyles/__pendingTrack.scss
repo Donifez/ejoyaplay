@@ -1,4 +1,7 @@
 @import '../abstracts/mixins';
+@import"../../../node_modules/animatewithsass/properties";
+
+@import "../../../node_modules/animatewithsass/_fading-entrances/fadeIn.scss";
 
 // .mainContent{
 //   width:100%;
@@ -83,14 +86,18 @@ font-family: var(--font-display-2);
 	box-shadow: var(	--box-shadow-1);
     border-collapse: collapse;
   margin:2.5rem auto;
+  @include fadeIn(
 
-  // @include respond(tab-land){
-  //   top:-6rem;
-   
-  // }
-  // @include respond (android-phone){
-  //   width:350px;
-  // }
+    $duration: 5s,
+    $count: 1,
+    $delay: .3s,
+    $function: ease, 
+    $fill: both
+  );
+
+@include respond (tab-port){
+  padding: 0.1rem;
+}
 }
 
 .tableTitle{
@@ -145,8 +152,16 @@ font-family: var(--font-display-2);
   background:rgba(212,222,226,0.53);
 }
 .approve_button{
-   height: 29px;	width: 113px;	border-radius: 3px;	background-color: #000000;
-   color:var(--color-white); border:none; position:relative;
+   height: 29px;
+  width: 113px;
+  border-radius: 3px;
+  background-color: #000000;
+  color:var(--color-white);
+  border:none;
+  position:relative;
+  &:hover{
+    background: green;
+  }
    @include respond(tab-land){
     font-size:1.4rem;
   }
@@ -167,6 +182,7 @@ font-family: var(--font-display-2);
   //   } 
 }
 .searchInput{
+  text-align:left !important;
   margin-top:13rem;
   height: 308px;	
   width: 208px;

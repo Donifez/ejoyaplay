@@ -94,6 +94,7 @@
               border: 1px solid #D4DEE2;
               color:#000;
               background: #F2F5F6;
+           
             }
             h3{
               text-align:center;
@@ -130,6 +131,10 @@
           display:grid;
           grid-template-columns: 1fr;
 
+          &:hover{
+            background: rgb(99, 92, 92)!important;
+            color:#ffffff !important;
+          }
           @include respond (tab-port){
             margin-left: 48rem;
           }

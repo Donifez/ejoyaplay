@@ -1,4 +1,8 @@
 @import "../abstracts/mixins";
+@import"../../../node_modules/animatewithsass/properties";
+@import "../../../node_modules/animatewithsass/_zooming-entrances/zoomInRight";
+
+@import "../../../node_modules/animatewithsass/_fading-entrances/fadeIn.scss";
 // Import your mixins here
 .container-wrapper{
   width: 100%;
@@ -27,6 +31,14 @@
   
   
   .user-activity-box {
+    @include zoomInRight(
+
+      $duration: 2s,
+      $count: 1,
+      $delay: .2s,
+      $function: ease, 
+      $fill: both
+    );
     height: 20rem;
     display:flex;
     flex-direction:column;
@@ -94,6 +106,11 @@
         margin-right:2rem;
         cursor:pointer;
         height:48px;
+        
+        &:hover{
+          background: rgb(99, 92, 92)!important;
+          color:#ffffff !important;
+        }
         @include respond(tab-land) {
           padding:2rem 0;
           margin-top:3rem
@@ -104,6 +121,14 @@
     .activity-table{
           width:98%;
           margin-top:3rem;
+          @include fadeIn(
+
+            $duration: 5s,
+            $count: 1,
+            $delay: .2s,
+            $function: ease, 
+            $fill: both
+          );
          
           table{
             border: 1px solid rgba(212,222,226,0.31);
@@ -177,6 +202,12 @@
         border-radius:4px;
         margin-right:2rem;
         cursor:pointer;
+        
+       &:hover{
+        border: 1x solid #000000;
+        color:#000000;
+        background:#ffff;
+      }
          @include respond(tab-land) {
            margin-top:2rem;
           padding:1rem 0;

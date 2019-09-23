@@ -1,3 +1,9 @@
+@import"../../../../node_modules/animatewithsass/properties";
+
+@import "../../../../node_modules/animatewithsass/_zooming-entrances/zoomInRight";
+
+
+
 .dashboard__content{
 display:block !important;
 margin-top:-1rem;
@@ -56,6 +62,12 @@ h2{
         height:48px;
        width:250px;
 
+       &:hover{
+         border: 1x solid #000000;
+         color:#000000;
+         background:#ffff;
+       }
+
       }
     }
     .dashboard-card-wrapper{
@@ -73,6 +85,15 @@ h2{
           border-radius: 0.4rem;
           background-color: #FFFFFF;
           box-shadow: 0 11px 27px 0 rgba(116,119,120,0.09);
+
+          @include zoomInRight(
+
+            $duration: 1s,
+            $count: 1,
+            $delay: .2s,
+            $function: ease, 
+            $fill: both
+          );
           
           button.viewUserBtn{
             // height: auto;
@@ -112,6 +133,14 @@ h2{
             grid-template-columns: repeat( auto-fill, minmax(20rem, 1fr) );
             margin-top:5rem;
             grid-gap:1rem;
+            @include zoomInRight(
+
+              $duration: 1s,
+              $count: 1,
+              $delay: .2s,
+              $function: ease, 
+              $fill: both
+            );
             .stats-card {
               height: 17rem;
               display:flex;

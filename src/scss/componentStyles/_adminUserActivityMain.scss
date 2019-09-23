@@ -1,4 +1,7 @@
 @import '../abstracts/mixins';
+@import"../../../node_modules/animatewithsass/properties";
+
+@import "../../../node_modules/animatewithsass/_fading-entrances/fadeIn.scss";
 .artistDetail{
 margin:0 auto;
 margin-top:0rem;
@@ -76,6 +79,15 @@ line-height: 36px;
 	box-shadow: var(	--box-shadow-1);
     border-collapse: collapse;
   margin:2.5rem auto;
+
+  @include fadeIn(
+
+    $duration: 5s,
+    $count: 1,
+    $delay: .2s,
+    $function: ease, 
+    $fill: both
+  );
   @include respond(tab-land) {
     width:100%;
   }
@@ -139,6 +151,7 @@ line-height: 36px;
 }
 .suspendButton {
   display:flex;
+  
   align-content:center;
   justify-content:center;
   height:4.8rem;
@@ -151,6 +164,11 @@ line-height: 36px;
 	border: 1px solid rgba(212,222,226,0.31);
 	border-radius: 0.4rem;
 box-shadow: 0 2px 14px 0 rgba(116,119,120,0.09);
+
+&:hover{
+  background: rgb(168, 37, 37);
+  color:#ffffff;
+}
 @include respond(android-phone){
   margin:1.5rem auto;
 }
