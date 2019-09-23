@@ -1,0 +1,202 @@
+@import "../../../scss/abstracts/mixins";
+
+.dashboard__content{
+  display:block !important;
+  margin-top:-1rem;
+  h2{
+          font-weight:normal;
+          font-size:3.2rem;
+          font-family:var(--font-display-2)
+        }
+  
+    .dashboardWrapper{
+    width:95%;
+    position:relative;
+    .goRight{
+      position:absolute;
+      padding:2rem;
+      top:15rem;
+      z-index:3;
+      border: 1px solid #DFE7EA;	
+      right:-8rem;
+      border-radius: 2px;	
+      opacity:0.3;
+      cursor:pointer;
+      background-color: #F2F5F6;
+      &:hover{
+        opacity:1;
+      }
+    }
+    
+      .dash_Heading{
+        display:grid;
+        grid-template-columns:2fr 0.5fr;
+        h2{
+          height: 34px;
+          width: 300px;	
+          color: #000000;
+          font-family: var(--font-display-2);
+          font-size: 36px;
+          font-weight: 300;
+          line-height: 36px;
+          @include respond (tab-land){
+            margin-left:10rem;
+          }
+          @include respond (phone){
+            margin-left:1rem;
+            font-size:22px;
+          }
+        }
+       
+         
+        button.admin_Button {
+          height: 48px;
+            width: 208px;
+         
+          // float:right;
+          font-size:1.3rem;
+          font-weight:600;
+          cursor:pointer;
+          font-family:var(--default-font);
+          border: 0.1rem solid #D4DEE2;
+          border-radius: 0.4rem;
+          background-color: #000000;
+          color:#ffff;
+        }
+      }
+      .dashboard-card-wrap{
+        margin-top:2rem;
+        width:150%;
+        display:grid;
+        overflow-x: scroll;
+        grid-template-columns: repeat( auto-fill, minmax(23rem, 1fr) );
+        .dashboardcard{
+            height: 18rem;
+            width: 27rem;
+           margin-top:2rem;
+            position:relative;
+            border: 0.1rem solid rgba(212,222,226,0.31);
+            border-radius: 0.4rem;
+            background-color: #FFFFFF;
+            box-shadow: 0 0px 27px 0px rgba(116,119,120,0.09);
+            
+            button.viewBtn{
+              font-family:var(--default-font);
+              height: auto; 
+              padding:1.2rem;
+              width: 99%;
+              position:absolute;
+              bottom:0;
+
+              cursor:pointer;
+              font-size:1.4rem;
+              border-radius: 0.4rem;
+              border: 1px solid #D4DEE2;
+              color:#000;
+              background: #F2F5F6;
+            }
+            h3{
+              text-align:center;
+              font-size:2.8rem;
+              font-weight:bold;
+              font-family:var(--default-font);
+              margin-top:3rem
+            }
+            h4{
+              text-align:center;
+              font-size:1.8rem;
+              margin-top:1rem;
+              font-weight:normal;
+              font-family:var(--default-font)
+            }
+        }
+      }
+        .progress-contain{
+        margin-top:7rem;
+        
+        .admin_Button{
+          width:208px;
+          color:black !important;
+          border: 1px solid #D4DEE2 !important;
+          background-color: #F2F5F6 !important;
+          font-weight:600 !important;
+          font-size:1.3rem !important;
+          box-sizing: border-box;
+          height: 48px;
+          border-radius: 4px;
+          margin-left: 71rem;
+          position:relative;
+          top:-4rem;
+          display:grid;
+          grid-template-columns: 1fr;
+
+          @include respond (tab-port){
+            margin-left: 48rem;
+          }
+          @include respond (phone){
+            margin-left: 5rem;
+            margin-top:6rem;
+          }
+          @include respond (small-android){
+            margin-left: 5rem;
+          }
+        }
+        .progress-wrapper{
+          margin-top:3rem;
+          display:grid;
+          grid-template-columns:1fr;
+          grid-gap:.1rem;
+          
+        }
+        .infoTable{
+          width:100%;
+          margin-left:0;
+          padding: 1rem 4rem;
+          @include respond (android){
+           width:100%;
+           .tableTitle_{
+             padding: 0.5rem;
+
+           }
+        }
+        .other_Info td{
+          font-size:1.6rem;
+          text-align:left;
+          padding: 2rem 1.9rem;
+          font-size:1.4rem;
+          border-bottom:1px solid #D4DEE2;
+            
+    @include respond(tab-land) {
+      width:100%;
+      padding:.5rem;
+
+    }
+    @include respond(tab-port) {
+      width:100%;
+      padding:.2rem;
+
+    }
+    @include respond(phone) {
+     
+      font-size:1.3rem;
+      width:100%;
+    }
+     @include respond(android-phone) {
+      margin:0 auto;
+      font-size:1.3rem;
+      width:100%;
+    }
+    @include respond(small-android){
+      margin:0 auto;
+      width:100%;
+      font-size:1.2rem;
+      padding:0.3rem;
+    
+    }
+        }
+      }
+    }
+    }
+  }
+  
+  

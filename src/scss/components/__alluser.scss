@@ -1,0 +1,151 @@
+@import '../abstracts/mixins';
+
+div.music_monitor_wrapper{
+    font-family:var(--default-font);
+    margin:0 auto;
+   width: 100%;
+
+   background: var(--color-white);
+   @include respond(tab-land){
+       width:100%;
+       margin:0 auto;
+   }
+
+   @include respond(android-phone){
+    width:100%;
+    
+  }
+  @include respond (small-android){
+      width:100%;
+
+  }
+
+
+  
+  .Alluser-activity-wrapper{
+    display:grid;
+    grid-template-columns:3fr 1fr;
+    margin-top:3rem;
+    padding-top:0rem;
+    @include respond(tab-land) {
+  grid-template-columns: 1fr;
+  margin-top:3rem;
+        }
+//  @include respond(android) {
+// grid-template-columns: 1fr;
+            
+//         }
+    
+    h2{
+      font-weight:300;
+      font-size:3.5rem;
+      @include respond(tab-land) {
+  text-align:center;
+  
+        }
+    }
+    .search{
+        margin-right:2rem;
+    }
+
+}
+
+  
+
+
+div{
+    margin-top:15rem;
+  
+    table{
+        border: 1px solid #ddd;
+        border-collapse: collapse;
+        width: 100%;
+        margin-top:2rem;
+        @include respond (android){
+         width:100%;
+         padding:0.1rem;
+        }
+     
+      .head { 
+        height: 15px;
+        width: 50px;	
+        color: rgba(0,0,0,0.61); 
+        border-top: 1px solid #ddd;
+        text-align: left;
+        font-family: var(--default-font);
+        font-size: 10px;
+       font-weight: 500;	
+       letter-spacing: 1.71px;
+        line-height: 15px;
+      padding:1.5rem 1.2rem;
+      @include respond(phone) {
+        padding: 0.2rem 0.1rem;
+        font-size: 7px;
+        }
+        @include respond(small-android) {
+        padding:0.2rem 0.1rem;
+        font-size:7px;
+
+        } 
+      }
+      td{
+        padding:0.8rem 1.2rem;
+        border-top: 1px solid #ddd;  
+        height: 16px;	
+        width: 251px;	
+        color: #000000;	
+        font-family: var(--default-font);	
+        font-size: 13px;
+        line-height: 16px;
+        .dot {
+          height: 25px;
+          width: 25px;
+          background-color: #bbb;
+          border-radius: 50%;
+          display: inline-block;
+        }
+	   
+        
+        span{
+            height: 16px;
+            width: 82px;
+            color: #000000;
+            font-family: var(--default-font);	
+            font-size: 13px;	
+            font-weight: bold;
+            line-height: 16px;
+
+            @include respond(phone) {
+              
+              font-size:10px;
+      
+              }
+        }
+        .side{
+          height: 39px;	
+          width: 39px;	
+          border-radius: 8px;
+          margin-left:2rem;
+
+      } 
+
+      
+      @include respond(phone) {
+        padding: 0.1rem 0.1rem;
+        font-size: 9px;
+        }
+        @include respond(small-android) {
+        padding:0.2rem 0.1rem;
+        font-size:10px;
+
+        }
+      }
+      
+
+}
+
+   
+}
+   
+
+}

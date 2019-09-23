@@ -1,0 +1,160 @@
+@import '../abstracts/mixins';
+
+.artistDetails{
+  margin:0 auto;
+  margin-left:4.2rem;
+  display:grid;
+  width:95%;
+  grid-template-columns: 5fr 1fr;
+  margin-top:-25rem;
+  @include respond(tab-land) {
+    margin-top:0;
+    margin-left:5em;
+    width:90%;
+  }
+  @include respond(android-phone){
+    grid-template-columns:1fr;
+    width:100%;
+    text-align:center;
+    margin-left:0;
+    margin-top:3rem;
+  }
+    
+  }
+  .artistCoverArt{
+    height: 10rem;
+    width: 10rem;
+    border-radius: 0.8rem;
+    border: 1px solid rgba(151,151,151,0.28);
+  }
+  
+  
+  .artistInfo {
+  font-family: var(--font-display-3);
+  font-size:4rem;
+  padding-left:0.5rem;
+  @include respond(android-phone){
+    padding-left:0;
+    text-align:center
+  }
+  
+  }
+  .description{
+  @include respond(phone) {
+    margin:0 auto;
+    width:90vw;
+    overflow:visible;
+  }
+}
+  // .artistInfo h1{
+
+  // }
+  .artistInfoh1{
+    font-size:3.4rem;
+    font-weight: 300;
+    padding-top:0;
+    margin-left:3rem;
+    margin-top:0;
+    font-family:var(--font-display-2)
+  }
+  .artistInfo h5{
+    font-size:1.8rem;
+    font-weight:500;
+
+    font-style:italic;
+    font-family:var(--default-font)
+  }
+  
+  .infoTab_le {
+    font-family:var(--default-font);
+    width:95%;
+    box-sizing:border-box;
+    border: 1px solid rgba(212,222,226,0.31);
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    box-shadow: var(	--box-shadow-1);
+      border-collapse: collapse;
+    margin:0 auto;
+    margin-top:4.2rem;
+     margin-left:4.2rem;
+     @include respond(tab-land) {
+      width:90vw;
+      margin-left:0;
+    }
+    @include respond(phone) {
+      margin:0 auto;
+      width:100%;
+    }
+    @include respond(small-android){
+      margin:0 auto;
+      width:100%;
+      font-size:1.3rem
+    }
+  }
+  
+  .tableTit_le{
+    text-align:left;
+    color:var(	--grey-color-1);
+     padding:2rem 2rem;
+    font-weight:500;
+    font-size:1.2rem;
+    font-family:var(--default-font);
+    border-bottom:1px solid #D4DEE2;
+    // @include respond(tab-land) {
+    //   width:100%;
+    //   padding:1rem 1rem;
+    // }
+    // @include respond(phone) {
+    //   margin:0 auto;
+    //   width:100%;
+    //   padding:0.6rem;
+    // }
+    @include respond(android-phone) {
+      padding:0.4rem;
+     }
+     @include respond(small-android) {
+      padding:0.2rem;
+      font-size:1.3rem;
+     }
+  }
+  .otherInfo td{
+    // font-size:1.6rem;
+    // width:170px;
+    // width:100px;
+    text-align:left;
+    padding:1.4rem 2rem;
+    font-size:1.4rem;
+    border-bottom:1px solid #D4DEE2;
+    color: #000000;
+    font-family: var(--default-font);
+    font-size: 13px;
+    line-height: 16px;
+     
+    // @include respond(tab-land) {
+    //   width:100%;
+    //   padding:3rem;
+
+    // }
+      @include respond(tab-port) {
+     padding:3rem;
+    }
+    @include respond(android-phone) {
+      padding:0.4rem;
+     }
+     @include respond(small-android) {
+      padding:0.2rem;
+     }
+     .region { 
+      font-size:1.3rem;
+      width:200px;
+    }
+  }    
+  
+  
+ 
+  td.centerBold{
+    font-weight:bold;
+    text-align:center;
+    font-size:1.5rem;
+  }
+  
