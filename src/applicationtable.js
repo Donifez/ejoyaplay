@@ -1,13 +1,13 @@
 import React, { Component } from "react";
-import "./scss/components/__application.scss";
+import "./scss/components/marketing.scss";
 
 class ApplicationTable extends Component {
   render() {
     return (
       
-        <div className="application-wrapper">
+        <div className="marketing-wrapper">
           
-            <div className="application-table" >
+            <div className="marketing-table" >
             <table>
              <tr> 
                <th className="head">Firstname</th> <th className="head">Lastname</th>  <th className="head">Email</th> <th className="head">Role</th> 

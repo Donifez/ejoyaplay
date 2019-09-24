@@ -11,6 +11,7 @@ import Dashboard from "./main";
 import UserActivity from "./users/index";
 import Artist from "../../artiste";
 import Application from "../../applicationtable";
+import Marketing from "../../marketing";
 import Promo from "../../promo";
 import Signup from "../../signup";
 import AllUser from ".././../allUser";
@@ -115,6 +116,10 @@ class DashBoardIndex extends Component {
 							<span className="setting" />
 							Notify
 						</NavLink>
+						<NavLink to="/marketing" className="heading-6-1 font-weight--5">
+							<span className="setting" />
+							Marketing
+						</NavLink>
 
 
 						
@@ -170,6 +175,7 @@ class DashBoardIndex extends Component {
 						<Route   path="/signup"  component={Signup} />
 						<Route   path="/login"  component={Login} />
 						<Route   path="/notify"  component={Notify} />
+						<Route   path="/marketing"  component={Marketing} />
 					</Switch>
 	             
 					</div> 
