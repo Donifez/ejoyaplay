@@ -1,0 +1,52 @@
+@import "../abstracts/mixins";
+
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 90%;
+    margin-left:-2.8rem;
+    height: 100%;
+    border: 1px solid #ddd;
+    @include respond(tab-port){
+        width: 90%;
+        margin:0 auto;
+    }
+    @include respond(phone){
+        width: 90%;
+        padding:1px;
+        margin-top:4rem;
+       
+    }
+    @include respond(small-android){
+        width: 90%;
+        padding:1px;
+        
+    }
+  }
+  
+  th, td {
+    text-align: center;
+    padding: 20px;
+    font-size:1.4rem;
+    
+
+    @include respond(tab-port) {
+        padding:10px ;
+        font-size:1rem;
+       
+        }
+
+     @include respond(phone) {
+        padding:1px ;
+        font-size:0.7rem;
+
+        }
+        @include respond(small-android) {
+        padding:1px;
+        font-size:0.5rem;
+
+        }
+  }
+  
+  tr:nth-child(even){background-color: #f2f2f2}

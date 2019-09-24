@@ -1,0 +1,91 @@
+@import "../abstracts/mixins";
+.sign-wrapper{
+    margin:0 auto;
+    form{
+        margin:0 auto;
+        .container{
+            margin:0 auto;  
+            
+      h1,p{
+          font-size:2rem;
+          text-align: center;
+          margin-top:1rem;
+          margin-left: -6rem;
+      }
+      div{
+          margin-top:2rem;
+          @include respond(tab-port){
+              margin-left: -5rem;
+          }
+     
+      label{
+        font-size:1.5rem;   
+         text-align:center !important;
+        margin-left: 20rem;
+       
+      }
+     input{
+         margin-left: 20rem;
+         margin-top: 1rem;
+         width: 50rem;
+         border: 1px solid rgb(75, 72, 72);
+         position:relative;
+         @include respond(phone){
+                  right:8rem;
+                  width: 30rem;
+              }
+              @include respond(small-android){
+                right:8rem;
+                width: 25rem;
+            }
+     }
+     select{
+        border: 1px solid rgb(75, 72, 72);
+        width: 50rem;
+        margin-left: 20rem; 
+        position:relative;
+        @include respond (tab-port){
+            right:-5rem;
+        }
+        @include respond(phone){
+            margin:0 auto;
+            left:17rem;
+            width: 30rem;
+        }
+        @include respond(small-android){
+            right:8rem;
+            width: 25rem;
+        }
+     }
+     .signupbtn{
+         background-color: #4CAF50;
+         border-radius: 5px;
+         border:none;
+         color: white;
+         padding: 14px 20px;
+         margin-top: 5rem;
+         width: 50rem;
+         margin-left: 20rem;
+         position:relative;
+         @include respond(phone){
+            margin:0 auto;
+        }
+         &:hover{
+            background: rgb(49, 138, 52);
+         }
+         @include respond(phone){
+            margin:0 auto;
+            left:12rem;
+            width: 30rem;
+        }
+        @include respond(small-android){
+            right:8rem;
+            width: 25rem;
+            left:12rem;
+        }
+     }
+    }
+    
+        }   
+    }
+}

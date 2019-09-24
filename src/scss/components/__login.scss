@@ -1,0 +1,33 @@
+@import "../abstracts/mixins";
+.loginbtn{
+    background-color: #4CAF50;
+    border-radius: 5px;
+    border:none;
+    color: white;
+    padding: 14px 20px;
+    margin-top: 1rem;
+    width: 50rem;
+    margin-left: 20rem;
+    position:relative;
+    @include respond(phone){
+       margin:0 auto;
+   }
+    &:hover{
+       background: rgb(49, 138, 52);
+    }
+    @include respond(tab-port){
+        margin:0 auto;
+        left:15rem;
+       
+    }
+    @include respond(phone){
+       margin:0 auto;
+       left:7rem;
+       width: 30rem;
+   }
+   @include respond(small-android){
+       right:8rem;
+       width: 25rem;
+       left:7rem;
+   }
+}

@@ -10,7 +10,13 @@ import Catalogue from "./catalogue/index";
 import Dashboard from "./main";
 import UserActivity from "./users/index";
 import Artist from "../../artiste";
+import Application from "../../applicationtable";
+import Promo from "../../promo";
+import Signup from "../../signup";
 import AllUser from ".././../allUser";
+import Login from "../../login";
+import Notify from "../../send/notify";
+
 // import Miniadmin from  "../MiniAdmin/index"; 
 
 import Burger from '../../components/Burger';
@@ -97,14 +103,33 @@ class DashBoardIndex extends Component {
 							<span className="setting" />
 							Alluser
 						</NavLink>
-						{/* <NavLink to={`${url}/artist/marketing-page`} className="signout-btn heading-6-1 font-weight--5">
-							<FiTarget className="signout" />
-							Market
-						</NavLink> */}
-						{/* <NavLink to={`${url}/artist/marketing-page`} className="mini-admin">
-						Mini-admin
+						<NavLink to="/signup" className="heading-6-1 font-weight--5">
+							<span className="setting" />
+							Signup
+						</NavLink>
+						<NavLink to="/applicationtable" className="heading-6-1 font-weight--5">
+							<span className="setting" />
+							Application
+						</NavLink>
+						<NavLink to="/notify" className="heading-6-1 font-weight--5">
+							<span className="setting" />
+							Notify
+						</NavLink>
 
-						</NavLink> */}
+
+						
+					
+						<NavLink to="/promo" className="heading-6-1 font-weight--5">
+							<span className="setting" />
+							Promo
+						</NavLink>
+						
+						<NavLink to="/login" className="heading-6-1 font-weight--5">
+							<span className="setting" />
+							Login
+						</NavLink>
+						
+						
 						<div
 							className="signout-btn heading-6-1 font-weight--5"
 							onClick={() => {
@@ -130,8 +155,8 @@ class DashBoardIndex extends Component {
 				
 						<Switch>
 					<Route exact path="/"  component={Dashboard}/>
+				
 					<Route  path="/_pendingTrack"  component={Pending}/>
-					
 					<Route  path="/artiste"  component={Artist}/>
 					<Route  path="/admin_transaction_history"  component={History}/>
 					<Route  path="/admin_users_activity"  component={Activity} />
@@ -140,6 +165,11 @@ class DashBoardIndex extends Component {
 						<Route   path="/catalogue"  component={Catalogue} />
 						<Route   path="/users"  component={UserActivity} />
 						<Route   path="/allUser"  component={AllUser} />
+						<Route   path="/applicationtable"  component={Application} />
+						<Route   path="/promo"  component={Promo} />
+						<Route   path="/signup"  component={Signup} />
+						<Route   path="/login"  component={Login} />
+						<Route   path="/notify"  component={Notify} />
 					</Switch>
 	             
 					</div> 
