@@ -17,6 +17,11 @@ import Signup from "../../signup";
 import AllUser from ".././../allUser";
 import Login from "../../login";
 import Notify from "../../send/notify";
+import Card from "../../Integration/Cards";
+import Account from "../../Integration/Account";
+import Transaction from "../../Integration/Transaction";
+import Transfer from "../../Integration/Transfer";
+
 
 // import Miniadmin from  "../MiniAdmin/index"; 
 
@@ -133,6 +138,23 @@ class DashBoardIndex extends Component {
 							<span className="setting" />
 							Login
 						</NavLink>
+						<NavLink to="/Cards" className="heading-6-1 font-weight--5">
+							<span className="setting" />
+							Card Integration
+						</NavLink>
+						<NavLink to="/Account" className="heading-6-1 font-weight--5">
+							<span className="setting" />
+							Account Integration
+						</NavLink>
+
+						<NavLink to="/Transaction" className="heading-6-1 font-weight--5">
+							<span className="setting" />
+							Transaction Integration
+						</NavLink>
+						<NavLink to="/Transfer" className="heading-6-1 font-weight--5">
+							<span className="setting" />
+							Transfer Integration
+						</NavLink>
 						
 						
 						<div
@@ -176,6 +198,10 @@ class DashBoardIndex extends Component {
 						<Route   path="/login"  component={Login} />
 						<Route   path="/notify"  component={Notify} />
 						<Route   path="/marketing"  component={Marketing} />
+						<Route   path="/Cards"  component={Card} />
+						<Route   path="/Account"  component={Account} />
+						<Route   path="/Transaction"  component={Transaction} />
+						<Route   path="/Transfer"  component={Transfer} />
 					</Switch>
 	             
 					</div> 
